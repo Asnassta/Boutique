@@ -1162,8 +1162,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	}
 }
 
-
 @media (max-width: 375px) {
+	/*Popup*/
+	.popup--program img {
+		width: 70%;
+	}
+}
+
+@media (max-width: 330px) {
 	.content__text {
 		font-size: 12px;
 		padding: 15px 20px;
@@ -1177,9 +1183,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 		padding: 12px 0;
 	}
 	/*Popup*/
-	.popup--program img {
-		width: 70%;
-	}
 	.item-popup__title {
 		font-size: 25px;
 		margin: 20px 0;
