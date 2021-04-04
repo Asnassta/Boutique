@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500&display=swap');
 /*Reset
 ===============*/
 *{
@@ -1142,7 +1142,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	}
 	/*Popup*/
 	.item-popup__image {
-		width: 100%;
+		width: 90%;
 	}
 	.popup__inner {
 		display: flex;
@@ -1157,7 +1157,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 @media (max-width: 375px) {
 	/*Popup*/
 	.popup--program img {
-		width: 80%;
+		width: 70%;
 	}
 }
 
@@ -1176,7 +1176,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	}
 	/*Popup*/
 	.item-popup__title {
-		font-size: 30px;
+		font-size: 25px;
 		margin: 20px 0;
 	}
 	.item-popup__text {
@@ -1184,22 +1184,22 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 		margin: 15px 0;
 	}
 	.item-popup__name {
-		font-size: 30px;
+		font-size: 25px;
 	}
 	.item-popup__prof {
-		font-size: 18px;
+		font-size: 16px;
 		margin-bottom: 15px;
 	}
 	.item-popup__social {
-		margin-top: 20px;
+		margin-top: 15px;
 	}
 	.social__icon {
-		width: 30px;
-		height: 30px;
+		width: 25px;
+		height: 25px;
 	}
 	.social__icon--facebook {
-		width: 30px;
-		height: 30px;
+		width: 25px;
+		height: 25px;
 	}
 }
 
