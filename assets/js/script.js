@@ -22,14 +22,35 @@ $(document).ready(function() {
 		$contentItem.hover(function() {
 			if($(window).width() < 992)
 			{
-			 	$(this).find($contentMore).slideToggle()
+				$(this).find($contentMore).slideToggle()
 			}
 			else
 			{
-				$(this).toggleClass('big')
-				$contentItem.not($(this)).toggleClass('small');
+
+				if($(this).hasClass('big') == false)
+				{
+						 $contentMore.hide();
+				 
+				 }
+				 $contentItem.removeClass('big');
+				$contentItem.addClass('small');
+
+					 $(this).removeClass('small');
+					$(this).addClass('big');
+					
+					 
+						
+					
+					setTimeout(function() { 
+							$('.big').find($contentMore).slideDown();
+					}, 400)
+
+			  
 			}
-		});
+
+		 }
+
+		 );
 
 		/*Slider*/
 		$('.slider-products').slick({
@@ -138,4 +159,3 @@ $(window).load(function() {
 	
 	});
 });
-	
