@@ -1169,6 +1169,24 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	.popup--program img {
 		width: 70%;
 	}
+	.item-popup__name {
+		font-size: 20px;
+	}
+	.item-popup__prof {
+		font-size: 14px;
+		margin-bottom: 15px;
+	}
+	.item-popup__social {
+		margin-top: 15px;
+	}
+	.social__icon {
+		width: 25px;
+		height: 25px;
+	}
+	.social__icon--facebook {
+		width: 25px;
+		height: 25px;
+	}
 }
 
 
@@ -1193,24 +1211,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	.item-popup__text {
 		font-size: 10px;
 		margin: 15px 0;
-	}
-	.item-popup__name {
-		font-size: 20px;
-	}
-	.item-popup__prof {
-		font-size: 14px;
-		margin-bottom: 15px;
-	}
-	.item-popup__social {
-		margin-top: 15px;
-	}
-	.social__icon {
-		width: 20px;
-		height: 20px;
-	}
-	.social__icon--facebook {
-		width: 20px;
-		height: 20px;
 	}
 }
 
