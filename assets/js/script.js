@@ -102,6 +102,7 @@ $(document).ready(function() {
 		let $popupProducts = $('#popup-products')
 			$popupExpert = $('#popup-expert')
 			$popupProgram = $('#popup-program')
+			$popup = $('.popup__wrapper')
 			$showExpert = $('#show-expert')
 			$showProgram = $('#show-program')
 			$showProducts = $('#show-products')
@@ -111,16 +112,10 @@ $(document).ready(function() {
 				event.preventDefault();
 				$popupProducts.addClass('show')
 			});
-			$closePopup.on('click', function() {
-				$popupProducts.removeClass('show')
-			});
 
 			$showExpert.on('click', function(event) {
 				event.preventDefault();
 				$popupExpert.addClass('show')
-			});
-			$closePopup.on('click', function() {
-				$popupExpert.removeClass('show')
 			});
 
 			$showProgram.on('click', function(event) {
@@ -128,12 +123,9 @@ $(document).ready(function() {
 				$popupProgram.addClass('show')
 			});
 			$closePopup.on('click', function() {
-				$popupProgram.removeClass('show')
+				$popup.removeClass('show')
 			});
 
-
-
-		
 
 });
 
