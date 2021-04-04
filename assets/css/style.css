@@ -395,9 +395,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	flex-direction: column;
 	position: absolute;
 	top: -150%;
-	left: 0;
 	z-index: 1000;
-	transition: all .9s ease;
+	transition: all 1s ease;
 	opacity: 0;
 }
 .popup__wrapper.show {
@@ -406,15 +405,19 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 .popup__wrapper--products {
-	left: -100%;
+	left: -150%;
 }
 
 .popup__wrapper--products.show {
 	left: 0;
 }
 
+.popup__wrapper--expert {
+	left: 0;
+}
+
 .popup__wrapper--program {
-	right: -100%;
+	right: -150%;
 }
 .popup__wrapper--program.show {
 	right: 0;
