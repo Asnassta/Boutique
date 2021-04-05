@@ -1,3 +1,19 @@
+let $contentItem = $('.content__item')
+			$contentMore = $('.content__more')
+			
+function close_slide()
+{
+	if($( ".content"  ).hasClass('active') == true)
+		{
+
+		 $contentItem.removeClass('small');
+		 $contentItem.removeClass('big');
+		 $contentMore.slideUp();
+		 $('.content').removeClass( 'active' );
+		}
+}
+
+
 $(document).ready(function() {
 
 	/*Contacts*/
@@ -14,9 +30,30 @@ $(document).ready(function() {
 			$contacts.slideToggle(400)
 		});
 
-		/*Content*/
-		let $contentItem = $('.content__item')
-			$contentMore = $('.content__more')
+
+	/*Content*/
+		
+
+		$( ".content" ).hover(
+		  function() {
+		    $( this ).addClass( 'active' );
+		  }, function() {
+		  
+		  	if($('.popup__wrapper').hasClass('show') == true)
+		  	{
+		  		return false;
+		  	}
+
+			setTimeout(function() { 
+					
+				 close_slide();
+			}, 100);
+			 
+
+		  }
+		);
+
+	
 
 
 		$contentItem.hover(function() {
@@ -45,12 +82,16 @@ $(document).ready(function() {
 							$('.big').find($contentMore).slideDown();
 					}, 400)
 
-			  
 			}
 
 		 }
 
 		 );
+/*
+		$(".content").mouseout(function(){
+			$contentItem.removeClass('big');
+				$contentItem.removeClass('small');
+		})*/
 
 		/*Slider*/
 		$('.slider-products').slick({
@@ -143,20 +184,35 @@ $(document).ready(function() {
 
 			$showProducts.on('click', function(event) {
 				event.preventDefault();
+				$('body').addClass('active');
+				$(this).addClass('active');
+				$(this).addClass('hide-content');
 				$popupProducts.addClass('show')
 			});
 
 			$showExpert.on('click', function(event) {
 				event.preventDefault();
+				$('body').addClass('active');
+				$(this).addClass('active')
+				$(this).addClass('hide-content')
 				$popupExpert.addClass('show')
 			});
 
 			$showProgram.on('click', function(event) {
 				event.preventDefault();
+				$('body').addClass('active');
+				$(this).addClass('active')
+				$(this).addClass('hide-content')
 				$popupProgram.addClass('show')
 			});
 			$closePopup.on('click', function() {
+				close_slide();
 				$popup.removeClass('show')
+				$(".btn--more").removeClass('active')
+				$('body').removeClass('active');
+				setTimeout(function() { 
+						$('.btn--more').removeClass('hide-content');
+					}, 400)
 			});
 
 
