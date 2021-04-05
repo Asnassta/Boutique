@@ -79,7 +79,7 @@ $(document).ready(function() {
 						
 					
 					setTimeout(function() { 
-							$('.big').find($contentMore).slideDown();
+							$('.big').find($contentMore).slideDown(800);
 					}, 400)
 
 			}
@@ -87,11 +87,7 @@ $(document).ready(function() {
 		 }
 
 		 );
-/*
-		$(".content").mouseout(function(){
-			$contentItem.removeClass('big');
-				$contentItem.removeClass('small');
-		})*/
+
 
 		/*Slider*/
 		$('.slider-products').slick({
