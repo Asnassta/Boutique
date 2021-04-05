@@ -36,6 +36,9 @@ img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
+body.active {
+	overflow: hidden;
+}
 
 
 /*Container
@@ -62,7 +65,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	font-family: 'Montserrat', sans-serif;
 	font-size: 22px;
 	font-weight: 700;
-	transition: all .3s linear;
+	
 }
 
 .btn:hover {
@@ -77,6 +80,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	color: #2d2d2d;
 
 	margin-top: 32px;
+	transition: all .3s linear;
 }
 
 .btn--more {
@@ -88,11 +92,34 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	text-align: center;
 	display: block;
 	margin: 0 auto;
+	position: relative;
+	transition: transform .4s linear;
 }
 
 .btn--more:hover {
 	background-color: rgba(255, 255, 255, 0.7);
 }
+
+.btn--more.active {
+	transform: scale(20,20);
+	z-index: 50;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.btn--more img,
+.btn--more span {
+	opacity: 1;
+	transition: opacity .1s linear;
+}
+
+.btn--more.hide-content img,
+.btn--more.hide-content span {
+	opacity: 0;
+}
+
+
+
+
 
 .btn--more img {
 	display: inline-block;
@@ -321,8 +348,10 @@ a.contacts__item:hover .contacts__info {
 /*Content
 =================*/
 .content {
-	width: 100%;
-	display: flex;
+    background: #191919;
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
 }
 
 .content__item {
@@ -421,34 +450,19 @@ a.contacts__item:hover .contacts__info {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
-	top: -150%;
+	top: 0;
+	left: 0;
 	z-index: 1000;
-	transition: all 1s ease;
+	transition: all .3s linear;
+	visibility: hidden;
 	opacity: 0;
 }
 .popup__wrapper.show {
-	top: 0;
+	visibility: visible;
 	opacity: 1;
+	transition: all 1.7s linear;
 }
 
-.popup__wrapper--products {
-	left: -150%;
-}
-
-.popup__wrapper--products.show {
-	left: 0;
-}
-
-.popup__wrapper--expert {
-	left: 0;
-}
-
-.popup__wrapper--program {
-	right: -150%;
-}
-.popup__wrapper--program.show {
-	right: 0;
-}
 
 .popup {
 	min-height: 100vh;
@@ -972,6 +986,10 @@ a.contacts__item:hover .contacts__info {
 	.content__item {
 		width: 100%;
 	}
+
+	.popup__wrapper.show {
+		transition: all 1.5s linear;
+	}
 }
 
 @media (max-width: 1024px) and (min-height: 1366px) {
@@ -1087,6 +1105,7 @@ a.contacts__item:hover .contacts__info {
 		width: 150px;
 		padding: 18px 0;
 	}
+
 	.btn--more img {
 		margin-right: 20px;
 	}
