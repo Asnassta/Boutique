@@ -59,14 +59,19 @@ $(document).ready(function() {
 		$contentItem.hover(function() {
 			if($(window).width() < 992)
 			{
-				$(this).find($contentMore).slideToggle()
+				$(this).find($contentMore).slideToggle();
+			
 			}
 			else
 			{
+	 
+
+
 
 				if($(this).hasClass('big') == false)
 				{
 						 $contentMore.hide();
+						 	$('.content__text').removeClass('showtext');
 				 
 				 }
 				 $contentItem.removeClass('big');
@@ -79,9 +84,15 @@ $(document).ready(function() {
 						
 					
 					setTimeout(function() { 
-							$('.big').find($contentMore).slideDown(800);
-					}, 400)
 
+							$('.big').find($contentMore).slideDown(800);
+					}, 400);
+
+						setTimeout(function() { 
+
+						$('.content__text').addClass('showtext');
+					}, 600);
+					
 			}
 
 		 }
