@@ -397,6 +397,7 @@ a.contacts__item:hover .contacts__info {
 	transition: all .4s linear;
 }
 
+ 
 .content__text {
 	font-family: 'Arial', sans-serif;
 	font-size: 36px;
@@ -409,12 +410,22 @@ a.contacts__item:hover .contacts__info {
 	border-radius: 19px;
 	box-shadow: 0 3px 6px rgba(255, 255, 255, 0.16);
 	padding: 40px 55px;
+	opacity: 0;
+		-moz-transition: all 1s linear;
+-webkit-transition: all 1s linear;
+-o-transition: all 1s linear;
+transition: all 1s linear;
 }
 
 .content__more {
 	display: none;
 }
 
+
+.content__item.big .content__text.showtext {
+	opacity: 1;
+
+}
 
 /*Footer
 ====================*/
