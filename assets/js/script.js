@@ -172,6 +172,80 @@ $(document).ready(function() {
   ]
 		});
 
+		/*Slider-footer*/
+		$('.slider-footer').slick({
+		infinite: true,
+		slidesToShow: 11,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 1000,
+		dots: false,
+		arrows: false,
+		responsive: [
+	{
+		breakpoint: 1281,
+			settings: {
+			slidesToShow: 10,
+			slidesToScroll: 1,
+			infinite: true,
+			autoplay: true,
+			autoplaySpeed: 1000,
+			dots: false,
+			arrows: false,
+		}
+	},
+	{
+		breakpoint: 1025,
+			settings: {
+			slidesToShow: 8,
+			slidesToScroll: 1,
+			infinite: true,
+			autoplay: true,
+			autoplaySpeed: 1000,
+			dots: false,
+			arrows: false,
+		}
+	},
+	{
+		breakpoint: 769,
+			settings: {
+			slidesToShow: 7,
+			slidesToScroll: 1,
+			infinite: true,
+			autoplay: true,
+			autoplaySpeed: 1000,
+			dots: false,
+			arrows: false,
+		}
+	},
+	{
+		breakpoint: 546,
+			settings: {
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			infinite: true,
+			autoplay: true,
+			autoplaySpeed: 1000,
+			dots: false,
+			arrows: false,
+		}
+	},
+	{
+		breakpoint: 376,
+			settings: {
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			infinite: true,
+			autoplay: true,
+			autoplaySpeed: 1000,
+			dots: false,
+			arrows: false,
+		}
+
+	}
+  ]
+		});
+
 		/*Popup*/
 		let $popupProducts = $('#popup-products')
 			$popupExpert = $('#popup-expert')
