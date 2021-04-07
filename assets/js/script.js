@@ -59,7 +59,8 @@ $(document).ready(function() {
 		$contentItem.hover(function() {
 			if($(window).width() < 992)
 			{
-				$(this).find($contentMore).slideToggle();
+				$(this).find($contentMore).slideToggle(500);
+
 			
 			}
 			else
@@ -112,7 +113,7 @@ $(document).ready(function() {
 		nextArrow: $('.arrow-slider__next--products'),
 		responsive: [
 	{
-		breakpoint: 1281,
+		breakpoint: 1280,
 			settings: {
 			slidesToShow: 1,
 			slidesToScroll: 1,
@@ -164,7 +165,7 @@ $(document).ready(function() {
 		nextArrow: $('.arrow-slider__next--program'),
 		responsive: [
 	{
-		breakpoint: 1281,
+		breakpoint: 1280,
 			settings: {
 			slidesToShow: 1,
 			slidesToScroll: 1,
