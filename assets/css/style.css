@@ -729,7 +729,7 @@ a.contacts__item:hover .contacts__info {
 	bottom: -35px;
 	left: 50%;
 	transform: translateX(-50%);
-	display: flex!important;
+	display: flex;
 }
 
 .slick-dots li {
@@ -960,9 +960,6 @@ transition: all 1s linear;
 		font-size: 12px;
 	}
 
-	.popup__wrapper--products .slick-dots {
-		display: none;
-	}
 
 }
 
